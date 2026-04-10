@@ -1,0 +1,23 @@
+name: V-Elevator
+version: ${project.version}
+main: com.elevatorplugin.ElevatorPlugin
+api-version: '1.21'
+description: Simple Elevators plugin - Press Space to go up, Shift to go down!
+authors: [ElevatorPlugin]
+
+commands:
+  elevator:
+    description: Elevator plugin commands
+    usage: /elevator <reload|give>
+    permission: elevator.admin
+
+permissions:
+  elevator.admin:
+    description: Access to /elevator commands
+    default: op
+  elevator.use:
+    description: Ability to use elevators
+    default: true
+  elevator.craft:
+    description: Ability to craft elevator blocks
+    default: true

@@ -1,0 +1,123 @@
+# ============================================
+#         Simple Elevators - Config
+#         Plugin Version: 1.0.0
+#         MC Version: 1.21.1 (Paper)
+# ============================================
+
+# ---------------------
+# Elevator Item Settings
+# ---------------------
+elevator-item:
+  # Material for the elevator block item
+  # Must be a valid Bukkit Material name
+  material: WHITE_WOOL
+
+  # Display name of the elevator block item
+  # Supports & color codes
+  display-name: "&bElevator"
+
+  # Lore lines shown on the item
+  lore:
+    - "&7Place this block to create an elevator."
+    - "&7Stand on it, press &eSpace &7to go up."
+    - "&7Press &eShift &7to go down."
+
+# ---------------------
+# Crafting Recipe
+# ---------------------
+crafting:
+  # Set to false to disable the crafting recipe
+  enabled: true
+
+  # The result count when crafting
+  result-amount: 1
+
+  # Recipe shape (3x3 grid)
+  # W = Wool ingredient | E = Ender Pearl ingredient
+  # Use letters defined in 'ingredients' below
+  shape:
+    - "WWW"
+    - "WEW"
+    - "WWW"
+
+  # Ingredient materials
+  # Key must match letters used in shape above
+  ingredients:
+    W: WHITE_WOOL
+    E: ENDER_PEARL
+
+# ---------------------
+# Elevator Behavior
+# ---------------------
+elevator:
+  # Maximum distance (in blocks) the elevator will scan up/down for another elevator block
+  max-floor-distance: 50
+
+  # Teleport sound when moving floors
+  # Set to '' (empty) to disable
+  teleport-sound: "ENTITY_ENDERMAN_TELEPORT"
+
+  # Volume of the teleport sound (0.0 - 1.0)
+  sound-volume: 0.5
+
+  # Pitch of the teleport sound
+  sound-pitch: 1.0
+
+# ---------------------
+# Particles
+# ---------------------
+particles:
+  # Enable/disable particles
+  enabled: true
+
+  # Particle type (must be a valid Bukkit Particle name)
+  type: PORTAL
+
+  # Number of particles to spawn
+  count: 20
+
+  # Spread/offset of particles
+  offset-x: 0.3
+  offset-y: 0.5
+  offset-z: 0.3
+
+  # Speed of particles
+  speed: 0.05
+
+# ---------------------
+# Messages (ActionBar / Title)
+# ---------------------
+messages:
+  # Show actionbar message when using elevator
+  actionbar-enabled: true
+  actionbar-up: "&a▲ Going Up ▲"
+  actionbar-down: "&c▼ Going Down ▼"
+  actionbar-no-floor: "&eNo floor found in that direction!"
+
+  # Show title message when using elevator
+  title-enabled: false
+  title-up: "&aFloor Up"
+  title-subtitle-up: "&7Moving to the next floor..."
+  title-down: "&cFloor Down"
+  title-subtitle-down: "&7Moving to the floor below..."
+
+  # General messages
+  prefix: "&8[&bElevator&8] &r"
+  reload-success: "&aConfiguration reloaded successfully!"
+  give-success: "&aGave &e{amount} &aElevator(s) to &e{player}&a."
+  no-permission: "&cYou don't have permission to do that."
+  player-not-found: "&cPlayer not found."
+
+# ---------------------
+# Blocked Worlds
+# ---------------------
+# Elevators will NOT work in these worlds
+# Players cannot place or use elevators here
+blocked-worlds:
+  - world_example_1
+  - world_example_2
+
+# ---------------------
+# Debug Mode
+# ---------------------
+debug: false
